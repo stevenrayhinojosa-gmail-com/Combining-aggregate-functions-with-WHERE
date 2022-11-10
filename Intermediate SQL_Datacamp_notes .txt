@@ -1,0 +1,22 @@
+--INTERMEDIATE sql
+--Combining aggregate functions with WHERE--
+SELECT MAX(gross) AS highest_gross
+FROM films  
+WHERE (release_year BETWEEN 2000 AND 2012);
+
+--Using ROUND()
+SELECT ROUND(AVG(facebook_likes), 1) AS avg_facebook_likes
+FROM reviews;---
+
+--ROUND() with a negative parameter
+SELECT ROUND(AVG(budget),-3) AS avg_budget_thousands
+FROM films;---
+---Aliasing with functions
+Select the title and duration in hours for all filmsd 
+alias as duration_hours; since the current durations are 
+in minutes, you'll need to divide duration by 60.0
+
+after two attempts
+answer:
+SELECT title, (duration/60.0) AS duration_hours
+FROM films;---
